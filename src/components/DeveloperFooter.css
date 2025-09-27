@@ -1,0 +1,155 @@
+/* Developer Footer Styles */
+.developer-footer {
+  background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+  color: white;
+  padding: 2rem 0 1rem;
+  margin-top: auto;
+}
+
+.developer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.developer-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.logo-icon {
+  font-size: 2rem;
+  color: #3b82f6;
+  padding: 0.5rem;
+  background-color: rgba(59, 130, 246, 0.1);
+  border-radius: 12px;
+}
+
+/* Styles pour l'image du logo */
+.logo-icon img,
+img.logo-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 8px;
+  padding: 0;
+  background-color: transparent;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.developer-description {
+  color: #9ca3af;
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.developer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: flex-end;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #d1d5db;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+  color: #3b82f6;
+  transform: translateX(-5px);
+}
+
+.contact-icon {
+  font-size: 1rem;
+  color: #6b7280;
+}
+
+.contact-item:hover .contact-icon {
+  color: #3b82f6;
+}
+
+.footer-divider {
+  border-color: rgba(255, 255, 255, 0.1);
+  margin: 1.5rem 0 1rem;
+}
+
+.copyright {
+  color: #9ca3af;
+  font-size: 0.85rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.heart-icon {
+  color: #ef4444;
+  font-size: 0.9rem;
+  animation: heartbeat 2s infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .developer-footer {
+    padding: 1.5rem 0 1rem;
+  }
+  
+  .developer-contact {
+    align-items: flex-start;
+    margin-top: 1rem;
+  }
+  
+  .contact-item:hover {
+    transform: none;
+  }
+  
+  .logo-text {
+    font-size: 1.25rem;
+  }
+  
+  .copyright {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+}
+
+/* Dark theme compatibility */
+@media (prefers-color-scheme: dark) {
+  .developer-footer {
+    background: linear-gradient(135deg, #0f172a 0%, #020617 100%);
+  }
+}
+
+/* Print styles */
+@media print {
+  .developer-footer {
+    display: none;
+  }
+}

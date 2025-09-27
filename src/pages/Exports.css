@@ -1,0 +1,279 @@
+/* Exports Page Styles */
+.page-title {
+  color: #1F2937;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.export-config-card,
+.export-preview-card,
+.export-types-card {
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  height: 100%;
+}
+
+.export-header {
+  background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
+  color: white;
+  border-radius: 16px 16px 0 0;
+  display: flex;
+  justify-content: between;
+  align-items: center;
+}
+
+.export-title {
+  color: white;
+  font-weight: 600;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.data-count {
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+.form-select-modern,
+.form-control-modern {
+  border: 1px solid #D1D5DB;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-select-modern:focus,
+.form-control-modern:focus {
+  border-color: #4F46E5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+  outline: none;
+}
+
+.date-range {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.date-separator {
+  color: #6B7280;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.export-btn {
+  background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.export-btn:hover {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.export-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.export-table {
+  margin: 0;
+}
+
+.export-table th {
+  background: #F8FAFC;
+  color: #374151;
+  font-weight: 600;
+  border: none;
+  padding: 1rem 0.75rem;
+}
+
+.export-table td {
+  border: none;
+  padding: 0.75rem;
+  border-bottom: 1px solid #F3F4F6;
+}
+
+.export-table tbody tr:hover {
+  background: #F8FAFC;
+}
+
+.no-data {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #6B7280;
+}
+
+.no-data svg {
+  opacity: 0.5;
+}
+
+.export-type-item {
+  text-align: center;
+  padding: 2rem 1rem;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.export-type-item:hover {
+  border-color: #4F46E5;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.export-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #F8FAFC 0%, #F1F5F9 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  color: #4F46E5;
+  border: 1px solid #E5E7EB;
+}
+
+.export-type-item h6 {
+  color: #1F2937;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.export-type-item p {
+  color: #6B7280;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+/* Spinner animation */
+.spinner-border-sm {
+  width: 1rem;
+  height: 1rem;
+  border-width: 0.15em;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .date-range {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .date-separator {
+    text-align: center;
+    padding: 0.5rem 0;
+  }
+  
+  .export-type-item {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Animation for cards */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.export-config-card,
+.export-preview-card,
+.export-types-card {
+  animation: fadeInUp 0.6s ease;
+}
+
+.export-type-item {
+  animation: fadeInUp 0.6s ease;
+  animation-fill-mode: both;
+}
+
+.export-type-item:nth-child(1) { animation-delay: 0.1s; }
+.export-type-item:nth-child(2) { animation-delay: 0.2s; }
+.export-type-item:nth-child(3) { animation-delay: 0.3s; }
+
+/* Loading state */
+.export-btn:disabled {
+  background: #9CA3AF;
+  cursor: not-allowed;
+}
+
+/* Badge styles */
+.badge {
+  font-size: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 20px;
+}
+
+/* Table responsive */
+.table-responsive {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Form group spacing */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
+}
+
+/* Card body padding */
+.card-body {
+  padding: 2rem;
+}
+
+/* Header spacing */
+.export-header {
+  padding: 1.5rem 2rem;
+}
+
+/* Icon colors */
+.export-icon svg {
+  color: #4F46E5;
+}
+
+/* Hover effects */
+.export-type-item:hover .export-icon {
+  background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Success state */
+.export-btn:not(:disabled):hover {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+}
+
+/* Focus states */
+.form-select-modern:focus,
+.form-control-modern:focus {
+  border-color: #4F46E5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+/* Empty state */
+.no-data {
+  background: #F8FAFC;
+  border-radius: 12px;
+  border: 1px dashed #D1D5DB;
+}

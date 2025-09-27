@@ -1,0 +1,294 @@
+/* Modal styles */
+.receipt-modal .modal-dialog {
+  max-width: 400px;
+}
+
+.receipt-modal-header {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-bottom: 2px solid #dee2e6;
+  padding: 15px 20px;
+}
+
+.receipt-modal-title {
+  color: #495057;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.receipt-close-btn {
+  color: #6c757d;
+  text-decoration: none;
+  padding: 0;
+  margin-left: auto;
+}
+
+.receipt-close-btn:hover {
+  color: #495057;
+}
+
+.receipt-modal-footer {
+  background-color: #f8f9fa;
+  border-top: 1px solid #dee2e6;
+  padding: 15px 20px;
+}
+
+/* Receipt content */
+.receipt-container {
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #000;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+/* Header */
+.receipt-header {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.store-name {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.store-info {
+  font-size: 10px;
+  line-height: 1.2;
+}
+
+/* Dividers */
+.receipt-divider {
+  text-align: center;
+  margin: 10px 0;
+  color: #666;
+  font-size: 10px;
+}
+
+/* Sale info */
+.sale-info {
+  margin-bottom: 10px;
+}
+
+.sale-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3px;
+}
+
+.sale-row .label {
+  font-weight: bold;
+}
+
+.sale-row .value {
+  text-align: right;
+}
+
+/* Customer info */
+.customer-info {
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 11px;
+}
+
+.customer-details {
+  text-align: center;
+  font-size: 11px;
+}
+
+/* Items */
+.items-section {
+  margin-bottom: 10px;
+}
+
+.items-header {
+  display: grid;
+  grid-template-columns: 2fr 0.5fr 1fr 1fr;
+  gap: 5px;
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 3px;
+  margin-bottom: 5px;
+  font-size: 10px;
+}
+
+.item-row {
+  margin-bottom: 8px;
+}
+
+.item-name {
+  font-weight: bold;
+  margin-bottom: 2px;
+  font-size: 11px;
+}
+
+.item-details {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 1fr;
+  gap: 5px;
+  font-size: 10px;
+  padding-left: 10px;
+}
+
+.item-qty, .item-price, .item-total {
+  text-align: right;
+}
+
+/* Totals */
+.totals-section {
+  margin-bottom: 15px;
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3px;
+  font-size: 11px;
+}
+
+.total-final {
+  font-weight: bold;
+  font-size: 13px;
+  border-top: 1px solid #000;
+  padding-top: 5px;
+  margin-top: 5px;
+}
+
+/* Footer */
+.receipt-footer {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.footer-message {
+  font-weight: bold;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.footer-info {
+  font-size: 9px;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.footer-contact {
+  font-size: 10px;
+  font-weight: bold;
+}
+
+/* Barcode */
+.barcode {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.barcode-lines {
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 3px;
+}
+
+.barcode-number {
+  font-size: 10px;
+  font-weight: bold;
+}
+
+/* Print styles */
+@media print {
+  .receipt-modal .modal-dialog {
+    max-width: none !important;
+    margin: 0 !important;
+  }
+  
+  .receipt-modal .modal-content {
+    border: none !important;
+    box-shadow: none !important;
+  }
+  
+  .receipt-modal-header,
+  .receipt-modal-footer {
+    display: none !important;
+  }
+  
+  .receipt-container {
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: none !important;
+    font-size: 11px;
+  }
+  
+  body * {
+    visibility: hidden;
+  }
+  
+  #receipt-content,
+  #receipt-content * {
+    visibility: visible;
+  }
+  
+  #receipt-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+  
+  /* Optimisation pour imprimante thermique */
+  .receipt-container {
+    width: 58mm; /* Largeur standard pour imprimante thermique */
+    font-size: 10px;
+  }
+  
+  .store-name {
+    font-size: 14px;
+  }
+  
+  .section-title {
+    font-size: 10px;
+  }
+  
+  .total-final {
+    font-size: 12px;
+  }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .receipt-modal .modal-dialog {
+    max-width: 95%;
+    margin: 10px;
+  }
+  
+  .receipt-container {
+    padding: 15px;
+    font-size: 11px;
+  }
+}
+
+/* Animation */
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.receipt-container {
+  animation: slideInDown 0.3s ease;
+}

@@ -1,0 +1,266 @@
+/* Loyal Customer Selector Styles */
+.loyal-customer-selector {
+  margin-bottom: 1.5rem;
+}
+
+.customer-input-group {
+  display: flex;
+  gap: 0.5rem;
+  align-items: stretch;
+}
+
+.customer-input {
+  flex: 1;
+  border: 1px solid #D1D5DB;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.customer-input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  outline: none;
+}
+
+.select-customer-btn,
+.add-customer-btn {
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.select-customer-btn {
+  background: #F8FAFC;
+  border: 1px solid #D1D5DB;
+  color: #374151;
+}
+
+.select-customer-btn:hover {
+  background: #667eea;
+  border-color: #667eea;
+  color: white;
+}
+
+.add-customer-btn {
+  background: #F0FDF4;
+  border: 1px solid #10B981;
+  color: #10B981;
+}
+
+.add-customer-btn:hover {
+  background: #10B981;
+  border-color: #10B981;
+  color: white;
+}
+
+.selected-customer-info {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background: #F0FDF4;
+  border: 1px solid #10B981;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.customer-details {
+  font-weight: 500;
+  color: #374151;
+}
+
+.customer-search {
+  position: relative;
+}
+
+.search-input {
+  border: 1px solid #D1D5DB;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  padding-left: 2.5rem;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  outline: none;
+}
+
+.customers-list {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.customer-name strong {
+  color: #1F2937;
+  font-weight: 600;
+}
+
+.customer-name small {
+  font-size: 0.8rem;
+}
+
+.no-customers {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #6B7280;
+}
+
+.no-customers svg {
+  opacity: 0.5;
+}
+
+/* Table styles */
+.table th {
+  background: #F8FAFC;
+  color: #374151;
+  font-weight: 600;
+  border: none;
+  padding: 1rem 0.75rem;
+}
+
+.table td {
+  border: none;
+  padding: 0.75rem;
+  border-bottom: 1px solid #F3F4F6;
+  vertical-align: middle;
+}
+
+.table tbody tr:hover {
+  background: #F8FAFC;
+}
+
+/* Badge styles */
+.badge {
+  font-size: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 20px;
+}
+
+/* Button styles */
+.btn {
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-sm {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+}
+
+/* Modal styles */
+.modal-content {
+  border-radius: 16px;
+  border: none;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 16px 16px 0 0;
+}
+
+.modal-title {
+  color: white;
+  font-weight: 600;
+}
+
+.modal-body {
+  padding: 2rem;
+}
+
+.modal-footer {
+  padding: 1.5rem 2rem;
+  border-top: 1px solid #E5E7EB;
+}
+
+/* Form styles */
+.form-control {
+  border: 1px solid #D1D5DB;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  outline: none;
+}
+
+.form-label {
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .customer-input-group {
+    flex-direction: column;
+  }
+  
+  .select-customer-btn,
+  .add-customer-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .selected-customer-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .table-responsive {
+    font-size: 0.875rem;
+  }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.selected-customer-info {
+  animation: fadeInUp 0.3s ease;
+}
+
+/* Loading states */
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Icon styles */
+.btn svg {
+  margin-right: 0.25rem;
+}
+
+/* Hover effects */
+.table tbody tr {
+  transition: all 0.3s ease;
+}
+
+.table tbody tr:hover {
+  background: #F8FAFC;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}

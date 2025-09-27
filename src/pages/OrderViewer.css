@@ -1,0 +1,293 @@
+/* Order Viewer Styles */
+.order-viewer-page {
+  background-color: #f8fafc;
+  min-height: 100vh;
+}
+
+/* Header */
+.order-viewer-header {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  color: white;
+  padding: 4rem 0 2rem;
+}
+
+.header-icon {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 1rem;
+}
+
+.header-title {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.header-subtitle {
+  opacity: 0.9;
+  font-size: 1.1rem;
+}
+
+/* Search Card */
+.search-card {
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin-top: -3rem;
+  position: relative;
+  z-index: 2;
+}
+
+.search-input {
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.search-btn {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  border: none;
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.search-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+}
+
+/* Order Details Card */
+.order-details-card {
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.order-header {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  border-bottom: 1px solid #e5e7eb;
+  padding: 1.5rem;
+}
+
+.status-badge {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+/* Section Titles */
+.section-title {
+  color: #374151;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+
+/* Customer Info */
+.customer-info {
+  background-color: #f9fafb;
+  padding: 1rem;
+  border-radius: 12px;
+  border-left: 4px solid #3b82f6;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  color: #374151;
+}
+
+.info-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0.5rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #e5e7eb;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -1.25rem;
+  top: 0.25rem;
+  width: 12px;
+  height: 12px;
+  background-color: #d1d5db;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-item.completed .timeline-marker {
+  background-color: #10b981;
+}
+
+.timeline-content strong {
+  display: block;
+  color: #374151;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.timeline-content small {
+  color: #6b7280;
+  font-size: 0.85rem;
+}
+
+/* Order Items Table */
+.order-items-table {
+  margin-top: 1rem;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.order-items-table th {
+  background-color: #f8fafc;
+  color: #374151;
+  font-weight: 600;
+  border: none;
+  padding: 1rem 0.75rem;
+}
+
+.order-items-table td {
+  padding: 1rem 0.75rem;
+  border-color: #f3f4f6;
+}
+
+.total-row td {
+  background-color: #f0f9ff;
+  border-top: 2px solid #3b82f6;
+  font-weight: 600;
+}
+
+.total-amount {
+  color: #059669;
+  font-size: 1.1rem;
+}
+
+/* Notes */
+.notes-text {
+  background-color: #f9fafb;
+  padding: 1rem;
+  border-radius: 12px;
+  border-left: 4px solid #f59e0b;
+  margin: 0;
+  color: #374151;
+}
+
+/* Help Card */
+.help-card {
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+.contact-info {
+  color: #374151;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .order-viewer-header {
+    padding: 3rem 0 1.5rem;
+  }
+  
+  .header-title {
+    font-size: 1.75rem;
+  }
+  
+  .search-card {
+    margin-top: -2rem;
+  }
+  
+  .timeline {
+    padding-left: 1rem;
+  }
+  
+  .timeline-marker {
+    left: -1rem;
+  }
+  
+  .order-header {
+    padding: 1rem;
+  }
+  
+  .status-badge {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .contact-info {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .contact-info span {
+    margin-right: 0 !important;
+  }
+}
+
+/* Loading Spinner */
+.spinner-border-sm {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Animations */
+.order-details-card {
+  animation: slideInUp 0.6s ease forwards;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Alert customization */
+.alert {
+  border-radius: 12px;
+  border: none;
+}

@@ -1,0 +1,252 @@
+/* Styles pour la modal de facture */
+.invoice-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+  padding: 20px;
+}
+
+.invoice-content {
+  background: white;
+  border-radius: 8px;
+  max-width: 800px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.invoice-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 2px solid #007bff;
+  background: #f8f9fa;
+  border-radius: 8px 8px 0 0;
+}
+
+.invoice-header h2 {
+  margin: 0;
+  color: #007bff;
+  font-size: 24px;
+}
+
+.close-btn, .print-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.close-btn:hover, .print-btn:hover {
+  background: #0056b3;
+}
+
+.print-btn {
+  background: #28a745;
+}
+
+.print-btn:hover {
+  background: #1e7e34;
+}
+
+.invoice-body {
+  padding: 30px;
+}
+
+/* En-tête de la facture */
+.invoice-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.company-info h3 {
+  color: #007bff;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.company-info p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.invoice-details {
+  text-align: right;
+}
+
+.invoice-details h4 {
+  color: #007bff;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.invoice-details p {
+  margin: 5px 0;
+  color: #666;
+}
+
+/* Informations client */
+.customer-info {
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 5px;
+}
+
+.customer-info h4 {
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.customer-info p {
+  margin: 5px 0;
+  color: #333;
+}
+
+/* Table des articles */
+.invoice-items {
+  margin-bottom: 30px;
+}
+
+.invoice-items table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.invoice-items th,
+.invoice-items td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.invoice-items th {
+  background: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+.invoice-items tr:nth-child(even) {
+  background: #f8f9fa;
+}
+
+.total-row {
+  background: #e9ecef !important;
+  font-weight: bold;
+}
+
+.total-row td {
+  border-top: 2px solid #007bff;
+  font-size: 16px;
+}
+
+/* Notes */
+.invoice-notes {
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #fff3cd;
+  border-radius: 5px;
+  border-left: 4px solid #ffc107;
+}
+
+.invoice-notes h4 {
+  color: #856404;
+  margin-bottom: 10px;
+}
+
+.invoice-notes p {
+  color: #856404;
+  margin: 0;
+}
+
+/* Pied de page */
+.invoice-footer {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #dee2e6;
+  color: #666;
+}
+
+.status {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.status.completed {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status.cancelled {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* Styles pour l'impression */
+@media print {
+  .invoice-modal {
+    position: static;
+    background: none;
+    padding: 0;
+  }
+
+  .invoice-content {
+    box-shadow: none;
+    border-radius: 0;
+    max-height: none;
+  }
+
+  .invoice-header {
+    border-radius: 0;
+  }
+
+  .close-btn {
+    display: none;
+  }
+
+  .print-btn {
+    display: none;
+  }
+
+  .invoice-body {
+    padding: 0;
+  }
+
+  /* Ajuster les couleurs pour l'impression */
+  .invoice-items th {
+    background: #f8f9fa !important;
+    color: #000 !important;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .total-row {
+    background: #f8f9fa !important;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .invoice-notes {
+    background: #f8f9fa !important;
+    border-left: 4px solid #000 !important;
+    -webkit-print-color-adjust: exact;
+  }
+}
