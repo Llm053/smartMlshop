@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/llm053.github.io/smartMlshop/static/css/main.9674af14.css",
-    "main.js": "/llm053.github.io/smartMlshop/static/js/main.327e190e.js",
-    "static/media/hero-background.jpg": "/llm053.github.io/smartMlshop/static/media/hero-background.b18291ac55a0640aa345.jpg",
-    "index.html": "/llm053.github.io/smartMlshop/index.html",
-    "main.9674af14.css.map": "/llm053.github.io/smartMlshop/static/css/main.9674af14.css.map",
-    "main.327e190e.js.map": "/llm053.github.io/smartMlshop/static/js/main.327e190e.js.map"
+    "main.css": "/smartMlshop/static/css/main.c7c025ed.css",
+    "main.js": "/smartMlshop/static/js/main.dc285a44.js",
+    "static/media/hero-background.jpg": "/smartMlshop/static/media/hero-background.b18291ac55a0640aa345.jpg",
+    "index.html": "/smartMlshop/index.html",
+    "main.c7c025ed.css.map": "/smartMlshop/static/css/main.c7c025ed.css.map",
+    "main.dc285a44.js.map": "/smartMlshop/static/js/main.dc285a44.js.map"
   },
   "entrypoints": [
-    "static/css/main.9674af14.css",
-    "static/js/main.327e190e.js"
+    "static/css/main.c7c025ed.css",
+    "static/js/main.dc285a44.js"
   ]
 }
