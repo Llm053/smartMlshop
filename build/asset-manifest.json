@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/llm053.github.io/smartMlshop/static/css/main.e54c5e4d.css",
+    "main.js": "/llm053.github.io/smartMlshop/static/js/main.48dfaef3.js",
+    "static/media/hero-background.jpg": "/llm053.github.io/smartMlshop/static/media/hero-background.b18291ac55a0640aa345.jpg",
+    "index.html": "/llm053.github.io/smartMlshop/index.html",
+    "main.e54c5e4d.css.map": "/llm053.github.io/smartMlshop/static/css/main.e54c5e4d.css.map",
+    "main.48dfaef3.js.map": "/llm053.github.io/smartMlshop/static/js/main.48dfaef3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e54c5e4d.css",
+    "static/js/main.48dfaef3.js"
+  ]
+}
