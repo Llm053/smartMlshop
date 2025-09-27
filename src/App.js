@@ -253,7 +253,7 @@ const App = () => {
   return (
     <AuthProvider>
       <CompanyProvider>
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
           <AppContent />
         </Router>
       </CompanyProvider>
